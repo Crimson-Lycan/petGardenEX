@@ -3,7 +3,7 @@ Class: Player Info Base
 Author: Crimson_Lycan
 Date: 6-12-2025
 """
-class playerInfoBase:
+class PlayerInfoBase:
     def __init__(self, name, idNum):
         self.name = name
         self.password = ""

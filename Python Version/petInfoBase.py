@@ -3,7 +3,7 @@ Class: Pet Info Base
 Author: Crimson_Lycan
 Date: 6-12-2025
 """
-class petInfoBase:
+class PetInfoBase:
     def __init__(self, name, idNum):
         # Basic Stats used in almost every pet sim.
         self.name = name
