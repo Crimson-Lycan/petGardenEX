@@ -22,6 +22,24 @@ class NostalSys:
         self.playerBase = PlayerInfoBase("", idString)
         self.playerBase.money = 100
 
+    #Load player data, needs work...
+    def loadGamePlayer(self):
+        with open(self.playerFileName) as json_file:
+            self.playerBase = json.load(json_file)
+        return self.playerBase
+    
+    #Save player data.
+    def saveGamePlayer(self):
+        with open(self.playerFileName, 'w') as outfile:
+            json.dump(self.playerBase, outfile)
+    
+    # Load basic pet data.
+    # A game using NostalSys needs to load expansion data in their own program for other key data.
+    def loadPetData(self):
+        with open(self.petFileName) as json_file:
+            self.petBase = json.load(json_file)
+        return self.petBase
+
     def petCommand(self):
         if (self.petBase.mood < 10):
             self.petBase.mood += 1
